@@ -2,11 +2,13 @@ package springfast.start;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class ProjectConfig {
 
     @Bean (name = "parrot_1")
+    @Primary
     public Parrot parrot1() {
         var parrot = new Parrot();
         parrot.setName("Skreppi Koko");
