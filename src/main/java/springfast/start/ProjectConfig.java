@@ -6,21 +6,21 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ProjectConfig {
 
-    @Bean
+    @Bean (name = "parrot_1")
     public Parrot parrot1() {
         var parrot = new Parrot();
         parrot.setName("Skreppi Koko");
         return parrot;
     }
 
-    @Bean
+    @Bean (value = "parrot_2")
     public Parrot parrot2() {
         var parrot = new Parrot();
         parrot.setName("Mikki Maus");
         return parrot;
     }
 
-    @Bean
+    @Bean ("parrot_3")
     public Parrot parrot3() {
         var parrot = new Parrot();
         parrot.setName("Rikki Martin");
