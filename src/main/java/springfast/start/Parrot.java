@@ -1,4 +1,4 @@
-package spring_fast.start;
+package springfast.start;
 
 public class Parrot {
     private String name;
