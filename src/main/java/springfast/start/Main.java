@@ -9,6 +9,9 @@ public class Main {
         Parrot parrot = context.getBean(Parrot.class);
         System.out.println(parrot.getName());
 
+        Cat cat = context.getBean(Cat.class);
+        System.out.println(cat.getName());
+
         String string = context.getBean(String.class);
         System.out.println(string);
 
