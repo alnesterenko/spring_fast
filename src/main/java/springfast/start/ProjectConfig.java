@@ -5,7 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
-/* Классы созданные мной лучше добавлять через стереотипную аннотацию,
+/* Классы созданные мной лучше добавлять через стереотипную аннотацию @Component,
  * а классы созданные не мной(например: взятые из сторонних библиотек) лучше добавлять через @Bean и метод */
 
 @Configuration
