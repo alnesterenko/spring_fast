@@ -11,4 +11,8 @@ public class Main {
         System.out.println("Parrot's name: " + parrot.getName());
         System.out.println("Person's parrot: " + person.getParrot());
     }
+
+    /*
+    * "Parrot created !" выводится только один раз, значит создаётся только один экземпляр попугая.
+    * */
 }
