@@ -1,8 +1,15 @@
 package springfast.chapter3;
 
+import org.springframework.stereotype.Component;
+
+/*
+* Важно не забыть указать, что попудлай тоже компонент !
+* */
+
+@Component
 public class Parrot {
 
-    private String name;
+    private String name = "Koko";
 
     public Parrot() {
         System.out.println("Parrot created !");
