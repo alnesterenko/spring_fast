@@ -3,13 +3,6 @@ package springfast.chapter3;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-/*
-* У этого способа больше недостатков, чем преимуществ:
-*  код сложнее читать,
-*  нельзя пометить поле как final,
-*  тестирование не становится проще.
-* */
-
 @Component
 public class Person {
 
@@ -17,7 +10,9 @@ public class Person {
 
     private Parrot parrot;
 
-    public Person() {
+    @Autowired
+    public Person(Parrot parrot) {
+        this.parrot = parrot;
     }
 
     public String getName() {
@@ -30,10 +25,5 @@ public class Person {
 
     public Parrot getParrot() {
         return parrot;
-    }
-
-    @Autowired
-    public void setParrot(Parrot parrot) {
-        this.parrot = parrot;
     }
 }
