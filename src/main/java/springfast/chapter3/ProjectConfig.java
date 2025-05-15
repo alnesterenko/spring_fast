@@ -1,14 +1,11 @@
 package springfast.chapter3;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-/*
-* Без аннотации @Qualifier не сработало.
-* */
-
 @Configuration
+@ComponentScan(basePackages = "springfast.chapter3")
 public class ProjectConfig {
 
     @Bean
@@ -23,13 +20,5 @@ public class ProjectConfig {
         Parrot parrot = new Parrot();
         parrot.setName("Miki");
         return parrot;
-    }
-
-    @Bean
-    public Person person(@Qualifier("parrot2") Parrot parrot) {
-        Person person = new Person();
-        person.setName("Ella");
-        person.setParrot(parrot);
-        return person;
     }
 }
