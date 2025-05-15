@@ -2,6 +2,11 @@ package springfast.chapter3;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+/*
+* Следует обратить внимание, что "Parrot created !" выводится два раза,
+*  то есть создаются оба бина с попугаями.
+* */
+
 public class Main {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
