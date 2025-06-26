@@ -1,11 +1,12 @@
 package springfast.chapter4.springcommentservice.proxies;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import springfast.chapter4.springcommentservice.model.Comment;
 
 @Component
-@Primary
+@Qualifier("PUSH")
 public class CommentPushNotificationProxy implements CommentNotificationProxy {
 
     @Override
