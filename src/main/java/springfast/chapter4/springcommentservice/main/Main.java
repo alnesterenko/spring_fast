@@ -5,6 +5,7 @@ import springfast.chapter4.springcommentservice.configuration.ProjectConfigurati
 import springfast.chapter4.springcommentservice.model.Comment;
 import springfast.chapter4.springcommentservice.services.CommentService;
 
+/* Победа! */
 public class Main {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(ProjectConfiguration.class);
