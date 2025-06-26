@@ -14,7 +14,7 @@ public class CommentService {
     private final CommentNotificationProxy commentNotificationProxy;
 
     /*
-     * !!! Если в классе только один конструктор, то анотация @Autowired не обязательна !!!
+     *  Если в классе только один конструктор, то анотация @Autowired не обязательна !!!
      * */
     public CommentService(CommentRepository commentRepository,
                           /* Каждый параметр, для которого нужно использовать специальную реализацию, сопровождается аннотацией @Qualifier */
