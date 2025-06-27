@@ -1,12 +1,21 @@
 package springfast.chapter4.springcommentservice.services;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import springfast.chapter4.springcommentservice.model.Comment;
 import springfast.chapter4.springcommentservice.proxies.CommentNotificationProxy;
 import springfast.chapter4.springcommentservice.repositories.CommentRepository;
 
-@Component
+/*
+* С помощью аннотации @Service мы показываем,
+*  что этот объект является компонентом, исполняющим обязанность сервиса
+ *
+ * Сервисы — объекты, задачей которых является реализация сценариев использования.
+ *
+ * Таким образом мы явно обозначаем обязанность компонента,
+ *  благодаря чему структура классов становится более понятной и удобной для чтения.
+ * */
+@Service
 public class CommentService {
 
     private final CommentRepository commentRepository;
