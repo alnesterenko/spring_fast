@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
-@ComponentScan(basePackages = {"springfast/chapter6/value/capture/services",
-                                "springfast/chapter6/value/capture/aspects"})
+@ComponentScan(basePackages = {"springfast/chapter6/value/change/services",
+                                "springfast/chapter6/value/change/aspects"})
 @EnableAspectJAutoProxy /* Активирует аспекты в Spring-приложении */
 public class ProjectConfig {
 }
