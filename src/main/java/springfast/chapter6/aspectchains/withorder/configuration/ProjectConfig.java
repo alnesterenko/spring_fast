@@ -11,7 +11,7 @@ import springfast.chapter6.aspectchains.withorder.aspects.SecurityAspect;
 @ComponentScan(basePackages = {"springfast/chapter6/aspectchains/withorder"})
 @EnableAspectJAutoProxy /* Активирует аспекты в Spring-приложении */
 public class ProjectConfig {
-    /* Теперь очерёдность зависит от порядка расположения бинов */
+    /* Теперь очерёдность зависит от чисел в аннотации @Order(?) */
     @Bean
     public LoggingAspect loggingAspect() {
         return new LoggingAspect();
