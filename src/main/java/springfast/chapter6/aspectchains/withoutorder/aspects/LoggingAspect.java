@@ -1,10 +1,8 @@
 package springfast.chapter6.aspectchains.withoutorder.aspects;
 
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.springframework.stereotype.Component;
 
 import java.util.logging.Logger;
 
@@ -12,7 +10,6 @@ import java.util.logging.Logger;
  С помощью @Aspect мы сообщаем Spring, что в данном классе содержится определение аспекта,
   но это не значит, что Spring сразу создаст для него бин */
 @Aspect
-@Component
 public class LoggingAspect {
 
     private final Logger logger = Logger.getLogger(LoggingAspect.class.getName());
