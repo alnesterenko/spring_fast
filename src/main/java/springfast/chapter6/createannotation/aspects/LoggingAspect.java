@@ -21,9 +21,9 @@ public class LoggingAspect {
      что нужно перехватывать вызовы всех методов из пакета services,
       независимо от типа возвращаемого значения, класса, к которому метод принадлежит,
        имени метода или принимаемых им параметров */
-    /* !!! В следующей строке путь до нужного пакета разделять ТОЛЬКО точками !!!
-    * !!! И обратить внимание на открывающие и закрывающие скобки !!! */
-    @Around("execution(* springfast.chapter6.createannotation.services.*.*(..))")
+
+    /* Будут перехватываться только методы отмеченные аннотацией ToLog */
+    @Around("@annotation(ToLog)")
     public Object log(ProceedingJoinPoint joinPoint) throws Throwable {
         /* Получение имени и параметров перехватываемого метода */
         String methodName = joinPoint.getSignature().getName();

@@ -18,5 +18,7 @@ public class Main {
 
         Comment comment = new Comment("Natasha", "Demo comment");
         service.publishComment(comment);
+        service.deleteComment(comment);
+        service.editComment(comment);
     }
 }

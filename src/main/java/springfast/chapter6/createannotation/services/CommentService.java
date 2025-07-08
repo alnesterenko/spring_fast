@@ -1,6 +1,7 @@
 package springfast.chapter6.createannotation.services;
 
 import org.springframework.stereotype.Service;
+import springfast.chapter6.createannotation.aspects.ToLog;
 import springfast.chapter6.createannotation.model.Comment;
 
 import java.util.logging.Logger;
@@ -9,11 +10,19 @@ import java.util.logging.Logger;
 @Service
 public class CommentService {
 
-    /* Мы внедрили объект logger, чтобы каждый раз, когда выполняется сценарий использования,
-     выводилось сообщение в консоль приложения */
     private final Logger logger = Logger.getLogger(CommentService.class.getName());
 
     public void publishComment(Comment comment) {
         logger.info("Publishing comment: " + comment.getText());
+    }
+
+    /* Мы создали СВОЮ аннотацию и отметили ей метод, который должен перехватываться. */
+    @ToLog
+    public void deleteComment(Comment comment) {
+        logger.info("Deleting comment: " + comment.getText());
+    }
+
+    public void editComment(Comment comment) {
+        logger.info("Editing comment: " + comment.getText());
     }
 }
