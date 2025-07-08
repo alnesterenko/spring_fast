@@ -8,4 +8,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @ComponentScan(basePackages = {"springfast/chapter6/aspectchains/withoutorder"})
 @EnableAspectJAutoProxy /* Активирует аспекты в Spring-приложении */
 public class ProjectConfig {
+    /* Очерёдность выполнения аспектов определяет их алфавитный порядок в папке aspects
+    * (Если нет аннотаций @Order и @Bean) */
 }

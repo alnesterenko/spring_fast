@@ -1,30 +1,26 @@
 package springfast.chapter6.aspectchains.withoutorder.aspects;
 
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
 import java.util.logging.Logger;
 
-/* Аннотация @Aspect не является стереотипной.
- С помощью @Aspect мы сообщаем Spring, что в данном классе содержится определение аспекта,
-  но это не значит, что Spring сразу создаст для него бин */
 @Aspect
 @Component
-public class LoggingAspect {
+public class ASecurityAspect {
 
-    private final Logger logger = Logger.getLogger(LoggingAspect.class.getName());
+    private final Logger logger = Logger.getLogger(ASecurityAspect.class.getName());
 
     @Around(value = "@annotation(ToLog)")
     public Object log(ProceedingJoinPoint joinPoint) throws Throwable {
-        logger.info("Logging Aspect: Calling the intercepted method");
+        logger.info("Security Aspect: Calling the intercepted method");
         /* Метод proceed() делегирует выполнение цепочки аспектов.
          Он вызывает либо следующий аспект, либо перехватываемый метод */
         Object returnedValue = joinPoint.proceed();
 
-        logger.info("Logging Aspect: Method executed and returned: " + returnedValue);
+        logger.info("Security Aspect: Method executed and returned: " + returnedValue);
         return returnedValue;
     }
 }

@@ -13,7 +13,8 @@ public class CommentService {
     private final Logger logger = Logger.getLogger(CommentService.class.getName());
 
     @ToLog
-    public void publishComment(Comment comment) {
+    public Object publishComment(Comment comment) {
         logger.info("Publishing comment: " + comment.getText());
+        return "SUCCESS!";
     }
 }
